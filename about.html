@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Vansh</title>
+  <meta name="description" content="About Vansh: background, technical skill set, and a timeline of GenAI and full-stack projects.">
+  <meta name="author" content="Vansh">
+  <link rel="canonical" href="https://example.com/about.html">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        Vansh <span class="brand-mark">// dev.log</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" style="padding-block: clamp(2.5rem, 6vw, 4rem) 1rem;" aria-labelledby="about-heading">
+      <div class="wrap">
+        <p class="spec-label">About</p>
+        <h1 id="about-heading" style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 1rem;">
+          College student, currently building toward a GenAI internship.
+        </h1>
+        <p class="hero-lede" style="max-width: 60ch;">
+          I learn by shipping complete, working systems rather than tutorials — full auth flows,
+          real database schemas, and LLM integrations that handle failure cases. Below is how my
+          skills break down and a timeline of what I've built recently.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap" style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+      <div>
+
+        <section class="block" style="border-top: none; padding-top: 0;" aria-labelledby="skills-heading">
+          <div class="block-head">
+            <span class="section-index">SPEC-03</span>
+            <h2 id="skills-heading">Skill set</h2>
+            <p>Comfortable working across the stack, as a hobbyist and self-directed learner.</p>
+          </div>
+
+          <div class="skill-columns">
+            <div>
+              <h3>Frontend</h3>
+              <ul>
+                <li>React / Vite</li>
+                <li>Tailwind CSS</li>
+                <li>Recharts</li>
+                <li>Accessible UI patterns</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Backend</h3>
+              <ul>
+                <li>Node.js / Express</li>
+                <li>Python / SQLAlchemy</li>
+                <li>JWT auth &amp; RBAC</li>
+                <li>REST API design</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Data &amp; infra</h3>
+              <ul>
+                <li>PostgreSQL / Prisma</li>
+                <li>SQLite</li>
+                <li>Docker Compose</li>
+                <li>Cloudinary / S3-compatible storage</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Applied GenAI</h3>
+              <ul>
+                <li>Claude API &amp; Gemini API</li>
+                <li>Retrieval-augmented generation</li>
+                <li>Forced tool calling</li>
+                <li>Prompt &amp; guardrail design</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" aria-labelledby="timeline-heading">
+          <div class="block-head">
+            <span class="section-index">SPEC-04</span>
+            <h2 id="timeline-heading">Build timeline</h2>
+            <p>A rough sequence of recent projects — each one built module by module.</p>
+          </div>
+
+          <ol class="timeline">
+            <li>
+              <span class="timeline-label">Most recent</span>
+              <h3>College ERP Portal</h3>
+              <p>A production-grade ERP system with 19 Prisma models, three role-based dashboards, and rotating JWT refresh tokens.</p>
+            </li>
+            <li>
+              <span class="timeline-label">Portfolio project</span>
+              <h3>RAG Compliance Document Assistant</h3>
+              <p>Architecture deep-dive plus a working prototype: chunking, hybrid retrieval, hallucination guardrails, and an audit log.</p>
+            </li>
+            <li>
+              <span class="timeline-label">Side project</span>
+              <h3>MemoryVault</h3>
+              <p>A private group photo/video sharing app with signed S3/R2 uploads, JWT auth, and a Docker Compose dev environment.</p>
+            </li>
+            <li>
+              <span class="timeline-label">Earlier build</span>
+              <h3>NL2SQL Analytics Tool</h3>
+              <p>Conversational analytics dashboard, later refactored into a multi-provider (Claude + Gemini) engine architecture.</p>
+            </li>
+          </ol>
+        </section>
+
+      </div>
+
+      <aside class="block" style="border-top: none; padding-top: 0;" aria-labelledby="quickfacts-heading">
+        <div class="bracket-frame" style="padding: 1.5rem;">
+          <h2 id="quickfacts-heading" style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-teal); margin: 0 0 1rem;">
+            Quick facts
+          </h2>
+          <dl style="margin: 0;">
+            <dt style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); text-transform: uppercase;">Status</dt>
+            <dd style="margin: 0.2rem 0 0.9rem; font-size: 0.94rem;">Actively seeking a GenAI internship</dd>
+
+            <dt style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); text-transform: uppercase;">Focus</dt>
+            <dd style="margin: 0.2rem 0 0.9rem; font-size: 0.94rem;">RAG systems, LLM-integrated backends</dd>
+
+            <dt style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); text-transform: uppercase;">Currently learning</dt>
+            <dd style="margin: 0.2rem 0; font-size: 0.94rem;">Vector databases, evaluation harnesses</dd>
+          </dl>
+        </div>
+      </aside>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; 2026 Vansh. Built with semantic HTML5.</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

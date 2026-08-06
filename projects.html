@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Vansh</title>
+  <meta name="description" content="Detailed write-ups of Vansh's projects: a RAG compliance assistant, a College ERP portal, MemoryVault, and an NL2SQL analytics tool.">
+  <meta name="author" content="Vansh">
+  <link rel="canonical" href="https://example.com/projects.html">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        Vansh <span class="brand-mark">// dev.log</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" style="padding-block: clamp(2.5rem, 6vw, 4rem) 1rem;" aria-labelledby="projects-heading">
+      <div class="wrap">
+        <p class="spec-label">Projects</p>
+        <h1 id="projects-heading" style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 1rem;">
+          Four builds, four different constraints.
+        </h1>
+        <p class="hero-lede" style="max-width: 60ch;">
+          Each project below was built as a complete system rather than a proof of concept —
+          with auth, error handling, and (where relevant) a working LLM integration.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap">
+
+      <article class="project-article" id="rag-assistant" aria-labelledby="rag-heading">
+        <div class="project-head">
+          <h2 id="rag-heading">RAG Compliance Document Assistant</h2>
+          <span class="project-status">Portfolio project</span>
+        </div>
+        <div class="project-body">
+          <div>
+            <p>
+              A document-grounded question-answering system built to demonstrate retrieval-augmented
+              generation end to end, not just a chat wrapper. The prototype runs client-side TF-IDF
+              retrieval, calls the Claude API for generation, and stamps every answer with citations
+              back to source passages.
+            </p>
+            <p>
+              Beyond retrieval, it simulates role-based access control at query time — so a user
+              without clearance to a document can't retrieve grounded content from it — and keeps a
+              running audit log of every query and the sources it touched, which matters a lot in a
+              compliance context.
+            </p>
+            <h3 style="font-family: var(--font-display); font-size: 1.05rem; margin: 1.5rem 0 0.5rem;">Key design decisions</h3>
+            <ul style="color: var(--ink-soft); font-size: 0.95rem; padding-left: 1.2rem;">
+              <li>Chunking strategy tuned for compliance documents rather than general text</li>
+              <li>Citation enforcement to reduce hallucinated answers</li>
+              <li>RBAC checked at retrieval time, not just at the UI layer</li>
+            </ul>
+          </div>
+          <dl class="project-meta">
+            <dt>Stack</dt>
+            <dd>HTML/JS, TF-IDF, Claude API</dd>
+            <dt>Role</dt>
+            <dd>Solo build</dd>
+            <dt>Status</dt>
+            <dd>Working prototype</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project-article" id="erp-portal" aria-labelledby="erp-heading">
+        <div class="project-head">
+          <h2 id="erp-heading">College ERP Portal</h2>
+          <span class="project-status">Most expansive build</span>
+        </div>
+        <div class="project-body">
+          <div>
+            <p>
+              A full-stack college administration system covering three distinct user roles —
+              Admin, Faculty, and Student — each with its own dashboard and permission boundaries.
+              Built module by module: authentication first, then core records, then reporting.
+            </p>
+            <p>
+              The data layer spans 19 Prisma models. Auth uses JWT with rotating refresh tokens
+              rather than long-lived access tokens, and file uploads (assignments, documents) go
+              through Cloudinary. The frontend includes Recharts-powered dashboards and an
+              in-app notification system.
+            </p>
+            <h3 style="font-family: var(--font-display); font-size: 1.05rem; margin: 1.5rem 0 0.5rem;">A real problem solved</h3>
+            <p style="color: var(--ink-soft); font-size: 0.95rem;">
+              Cloudinary v1/v2 conflicted with the multer-storage-cloudinary integration during
+              the build — resolving that dependency mismatch was part of getting file uploads
+              working reliably.
+            </p>
+          </div>
+          <dl class="project-meta">
+            <dt>Stack</dt>
+            <dd>React, Vite, Tailwind, Node.js, Express, PostgreSQL, Prisma</dd>
+            <dt>Scale</dt>
+            <dd>19 data models, 3 roles</dd>
+            <dt>Status</dt>
+            <dd>Complete</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project-article" id="memoryvault" aria-labelledby="memoryvault-heading">
+        <div class="project-head">
+          <h2 id="memoryvault-heading">MemoryVault</h2>
+          <span class="project-status">Side project</span>
+        </div>
+        <div class="project-body">
+          <div>
+            <p>
+              A private photo and video sharing app for a close friend group — built out of an
+              actual need rather than as a portfolio exercise. Uploads go to S3-compatible storage
+              (AWS S3 or Cloudflare R2) behind signed URLs, so media stays private to the group.
+            </p>
+            <p>
+              Auth uses JWT with bcrypt-hashed passwords, and Nodemailer handles notification
+              emails. A Docker Compose setup makes local development reproducible across machines.
+            </p>
+          </div>
+          <dl class="project-meta">
+            <dt>Stack</dt>
+            <dd>React 18, Node.js, Express, PostgreSQL, AWS S3 / R2</dd>
+            <dt>Auth</dt>
+            <dd>JWT + bcrypt</dd>
+            <dt>Status</dt>
+            <dd>Complete, deployment in progress</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project-article" id="nl2sql" aria-labelledby="nl2sql-heading">
+        <div class="project-head">
+          <h2 id="nl2sql-heading">NL2SQL Enterprise Analytics Tool</h2>
+          <span class="project-status">Earlier build</span>
+        </div>
+        <div class="project-body">
+          <div>
+            <p>
+              A conversational analytics dashboard that turns natural-language questions into SQL
+              queries against a real database, with a security layer to prevent destructive or
+              out-of-scope queries from executing.
+            </p>
+            <p>
+              Originally built around the Claude API with forced tool calling, then refactored into
+              a multi-provider architecture supporting both Claude and Gemini — a shared schema and
+              base engine class, with provider-specific implementations underneath.
+            </p>
+          </div>
+          <dl class="project-meta">
+            <dt>Stack</dt>
+            <dd>SQLAlchemy, SQLite, Streamlit, Claude API, Gemini API</dd>
+            <dt>Notable</dt>
+            <dd>Multi-provider engine architecture</dd>
+            <dt>Status</dt>
+            <dd>Complete</dd>
+          </dl>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; 2026 Vansh. Built with semantic HTML5.</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Vansh</title>
+  <meta name="description" content="Get in touch with Vansh about GenAI internship opportunities, collaboration, or questions about a project.">
+  <meta name="author" content="Vansh">
+  <link rel="canonical" href="https://example.com/contact.html">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        Vansh <span class="brand-mark">// dev.log</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" style="padding-block: clamp(2.5rem, 6vw, 4rem) 1rem;" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <p class="spec-label">Contact</p>
+        <h1 id="contact-heading" style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 1rem;">
+          Let's talk.
+        </h1>
+        <p class="hero-lede" style="max-width: 60ch;">
+          Reach out about internship opportunities, a project you'd like to discuss, or just to
+          say hi. Email, GitHub, and LinkedIn are the best ways to reach me. The form below is
+          fully keyboard-navigable — tab through in order, and error messages are announced as
+          you submit.
+        </p>
+      </div>
+    </section>
+
+    <section class="block" style="border-top: none; padding-top: 0;" aria-labelledby="contact-form-heading">
+      <div class="wrap contact-layout">
+
+        <div>
+          <h2 id="contact-form-heading" class="visually-hidden">Contact form</h2>
+
+          <form id="contact-form" novalidate>
+
+            <!-- Live region for submit status: announced to screen readers -->
+            <div id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+
+            <div class="form-field">
+              <label for="name">Name <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                data-required="true"
+                data-error-target="name-error"
+                aria-describedby="name-error"
+                aria-invalid="false"
+                aria-required="true"
+                autocomplete="name"
+              >
+              <span id="name-error" class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                data-required="true"
+                data-error-target="email-error"
+                aria-describedby="email-hint email-error"
+                aria-invalid="false"
+                aria-required="true"
+                autocomplete="email"
+              >
+              <span id="email-hint" class="form-hint">We'll only use this to reply to your message.</span>
+              <span id="email-error" class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" autocomplete="off">
+                <option value="internship">Internship opportunity</option>
+                <option value="project">Question about a project</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message <span class="required-mark" aria-hidden="true">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                data-required="true"
+                data-error-target="message-error"
+                aria-describedby="message-error"
+                aria-invalid="false"
+                aria-required="true"
+              ></textarea>
+              <span id="message-error" class="form-error" role="alert"></span>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </div>
+
+          </form>
+        </div>
+
+        <aside class="contact-aside" aria-labelledby="contact-details-heading">
+          <div class="card">
+            <h3 id="contact-details-heading">Other ways to reach me</h3>
+            <dl class="contact-list">
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:vanshdongriyal2005@gmail.com">vanshdongriyal2005@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>GitHub</dt>
+                <dd><a href="https://github.com/vanshDongrii">github.com/vanshDongrii</a></dd>
+              </div>
+              <div>
+                <dt>LinkedIn</dt>
+                <dd><a href="https://www.linkedin.com/in/vansh-dogriyal-422100298?utm_source=share_via&utm_content=profile&utm_medium=member_android">linkedin.com/in/vansh-dogriyal-422100298</a></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="card">
+            <h3>Response time</h3>
+            <p style="margin: 0; color: var(--ink-soft); font-size: 0.94rem;">
+              I typically reply within 2–3 days. For internship-related messages, feel free to
+              mention your timeline.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; 2026 Vansh. Built with semantic HTML5.</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

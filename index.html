@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vansh — GenAI &amp; Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Vansh, a full-stack developer building GenAI-powered systems: RAG pipelines, NL2SQL analytics, and production-grade web applications.">
+  <meta name="author" content="Vansh">
+  <meta name="keywords" content="Vansh portfolio, GenAI developer, RAG systems, full-stack developer, React, Node.js, PostgreSQL, Claude API">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vansh — GenAI & Full-Stack Developer">
+  <meta property="og:description" content="Building retrieval-augmented and full-stack systems: RAG assistants, NL2SQL tools, and production web apps.">
+  <meta property="og:url" content="https://example.com/">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="canonical" href="https://example.com/">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        Vansh <span class="brand-mark">// dev.log</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="spec-label">Portfolio — Rev. 2026.08</p>
+          <h1 id="hero-heading">
+            Building <span class="accent">retrieval-grounded</span> systems, one module at a time.
+          </h1>
+          <p class="hero-lede">
+            I'm Vansh, a full-stack developer focused on generative AI infrastructure — RAG
+            pipelines, analytics copilots, and production web applications built with
+            React, Node.js, and PostgreSQL.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="projects.html">View projects</a>
+            <a class="btn btn-secondary" href="contact.html">Get in touch</a>
+          </div>
+        </div>
+
+        <div>
+          <figure class="bracket-frame" style="padding: 1.5rem; margin: 0;">
+            <figcaption class="spec-label" style="margin-bottom: 1rem;">Fig. 1 — RAG pipeline shape</figcaption>
+            <svg class="pipeline-diagram" viewBox="0 0 460 220" role="img" aria-labelledby="pipeline-title pipeline-desc">
+              <title id="pipeline-title">Diagram of a retrieval-augmented generation pipeline</title>
+              <desc id="pipeline-desc">Four connected stages flow left to right: Ingest, Retrieve, Generate, and Audit, representing the architecture used in the compliance document assistant project.</desc>
+
+              <!-- connectors -->
+              <line x1="95" y1="60" x2="140" y2="60" stroke="#2E6E62" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="230" y1="60" x2="275" y2="60" stroke="#2E6E62" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="185" y1="95" x2="185" y2="150" stroke="#9C6423" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="185" y1="150" x2="365" y2="150" stroke="#9C6423" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="365" y1="150" x2="365" y2="95" stroke="#9C6423" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+              <!-- node: Ingest -->
+              <rect x="15" y="35" width="80" height="50" rx="4" fill="#F7F5EC" stroke="#C9C4B0"/>
+              <text x="55" y="56" text-anchor="middle" class="pipeline-node-title">Ingest</text>
+              <text x="55" y="72" text-anchor="middle" class="pipeline-node-label">chunk + embed</text>
+
+              <!-- node: Retrieve -->
+              <rect x="140" y="35" width="90" height="50" rx="4" fill="#F7F5EC" stroke="#C9C4B0"/>
+              <text x="185" y="56" text-anchor="middle" class="pipeline-node-title">Retrieve</text>
+              <text x="185" y="72" text-anchor="middle" class="pipeline-node-label">TF-IDF / hybrid</text>
+
+              <!-- node: Generate -->
+              <rect x="275" y="35" width="90" height="50" rx="4" fill="#F7F5EC" stroke="#C9C4B0"/>
+              <text x="320" y="56" text-anchor="middle" class="pipeline-node-title">Generate</text>
+              <text x="320" y="72" text-anchor="middle" class="pipeline-node-label">Claude API</text>
+
+              <!-- node: Audit -->
+              <rect x="320" y="150" width="90" height="50" rx="4" fill="#F7F5EC" stroke="#C9C4B0"/>
+              <text x="365" y="171" text-anchor="middle" class="pipeline-node-title">Audit</text>
+              <text x="365" y="187" text-anchor="middle" class="pipeline-node-label">RBAC + log</text>
+            </svg>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STRENGTHS ================= -->
+    <section class="block" aria-labelledby="strengths-heading">
+      <div class="wrap">
+        <div class="block-head">
+          <span class="section-index">SPEC-01</span>
+          <h2 id="strengths-heading">What I bring to a GenAI team</h2>
+          <p>Practical experience across the full stack, with a focus on making AI-powered features reliable and auditable, not just impressive in a demo.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Retrieval &amp; grounding</h3>
+            <p>Chunking strategy, hybrid retrieval, and citation enforcement to reduce hallucination in document-grounded assistants.</p>
+          </article>
+          <article class="card">
+            <h3>Production backends</h3>
+            <p>Node.js/Express and Python services with JWT auth, role-based access control, and PostgreSQL/Prisma data modeling.</p>
+          </article>
+          <article class="card">
+            <h3>Applied LLM integration</h3>
+            <p>Forced tool calling, multi-provider architectures (Claude + Gemini), and SQL security layers for conversational analytics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PROJECTS ================= -->
+    <section class="block" aria-labelledby="featured-heading">
+      <div class="wrap">
+        <div class="block-head">
+          <span class="section-index">SPEC-02</span>
+          <h2 id="featured-heading">Featured builds</h2>
+          <p>A sample of recent projects. Full write-ups, stacks, and architecture notes are on the projects page.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>RAG Compliance Assistant</h3>
+            <p>Document-grounded Q&amp;A with TF-IDF retrieval, citation stamps, simulated RBAC, and a query audit log.</p>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Claude API</li>
+              <li>TF-IDF</li>
+              <li>RBAC</li>
+            </ul>
+            <a class="card-link" href="projects.html#rag-assistant">Read more <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card">
+            <h3>College ERP Portal</h3>
+            <p>19-model Prisma schema, three role-based dashboards, rotating JWT refresh tokens, and Cloudinary file storage.</p>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>React</li>
+              <li>Prisma</li>
+              <li>PostgreSQL</li>
+            </ul>
+            <a class="card-link" href="projects.html#erp-portal">Read more <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card">
+            <h3>NL2SQL Analytics Tool</h3>
+            <p>Conversational analytics dashboard with forced tool calling and a multi-provider (Claude/Gemini) engine architecture.</p>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>SQLAlchemy</li>
+              <li>Streamlit</li>
+              <li>Gemini</li>
+            </ul>
+            <a class="card-link" href="projects.html#nl2sql">Read more <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="block" aria-labelledby="cta-heading">
+      <div class="wrap">
+        <div class="bracket-frame" style="padding: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <h2 id="cta-heading" style="font-family: var(--font-display); margin: 0 0 0.4rem; font-size: 1.4rem;">Looking for a GenAI intern who ships?</h2>
+            <p style="margin: 0; color: var(--ink-soft);">I'm actively interviewing and open to internship opportunities.</p>
+          </div>
+          <a class="btn btn-primary" href="contact.html">Start a conversation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; 2026 Vansh. Built with semantic HTML5.</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
