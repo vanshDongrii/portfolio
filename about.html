@@ -18,9 +18,15 @@
       <a class="brand" href="index.html">
         Vansh <span class="brand-mark">// dev.log</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-        Menu
-      </button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="theme-toggle__icon">🌙</span>
+          <span class="theme-toggle__label">Dark</span>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          Menu
+        </button>
+      </div>
       <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -34,13 +40,13 @@
 
   <main id="main-content">
 
-    <section class="hero" style="padding-block: clamp(2.5rem, 6vw, 4rem) 1rem;" aria-labelledby="about-heading">
-      <div class="wrap">
+    <section class="hero" aria-labelledby="about-heading">
+      <div class="wrap hero-hero">
         <p class="spec-label">About</p>
-        <h1 id="about-heading" style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 1rem;">
+        <h1 id="about-heading">
           College student, currently building toward a GenAI internship.
         </h1>
-        <p class="hero-lede" style="max-width: 60ch;">
+        <p class="hero-lede">
           I learn by shipping complete, working systems rather than tutorials — full auth flows,
           real database schemas, and LLM integrations that handle failure cases. Below is how my
           skills break down and a timeline of what I've built recently.
@@ -48,10 +54,10 @@
       </div>
     </section>
 
-    <div class="wrap" style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+    <div class="wrap page-grid">
       <div>
 
-        <section class="block" style="border-top: none; padding-top: 0;" aria-labelledby="skills-heading">
+        <section class="block no-top-border" aria-labelledby="skills-heading">
           <div class="block-head">
             <span class="section-index">SPEC-03</span>
             <h2 id="skills-heading">Skill set</h2>
@@ -131,20 +137,18 @@
 
       </div>
 
-      <aside class="block" style="border-top: none; padding-top: 0;" aria-labelledby="quickfacts-heading">
-        <div class="bracket-frame" style="padding: 1.5rem;">
-          <h2 id="quickfacts-heading" style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-teal); margin: 0 0 1rem;">
-            Quick facts
-          </h2>
-          <dl style="margin: 0;">
-            <dt style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); text-transform: uppercase;">Status</dt>
-            <dd style="margin: 0.2rem 0 0.9rem; font-size: 0.94rem;">Actively seeking a GenAI internship</dd>
+      <aside class="block no-top-border quick-facts" aria-labelledby="quickfacts-heading">
+        <div class="bracket-frame quick-facts-panel">
+          <h2 id="quickfacts-heading">Quick facts</h2>
+          <dl>
+            <dt>Status</dt>
+            <dd>Actively seeking a GenAI internship</dd>
 
-            <dt style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); text-transform: uppercase;">Focus</dt>
-            <dd style="margin: 0.2rem 0 0.9rem; font-size: 0.94rem;">RAG systems, LLM-integrated backends</dd>
+            <dt>Focus</dt>
+            <dd>RAG systems, LLM-integrated backends</dd>
 
-            <dt style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); text-transform: uppercase;">Currently learning</dt>
-            <dd style="margin: 0.2rem 0; font-size: 0.94rem;">Vector databases, evaluation harnesses</dd>
+            <dt>Currently learning</dt>
+            <dd>Vector databases, evaluation harnesses</dd>
           </dl>
         </div>
       </aside>

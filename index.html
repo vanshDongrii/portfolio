@@ -27,9 +27,15 @@
       <a class="brand" href="index.html">
         Vansh <span class="brand-mark">// dev.log</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-        Menu
-      </button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="theme-toggle__icon">🌙</span>
+          <span class="theme-toggle__label">Dark</span>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          Menu
+        </button>
+      </div>
       <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -63,8 +69,8 @@
         </div>
 
         <div>
-          <figure class="bracket-frame" style="padding: 1.5rem; margin: 0;">
-            <figcaption class="spec-label" style="margin-bottom: 1rem;">Fig. 1 — RAG pipeline shape</figcaption>
+          <figure class="bracket-frame pipeline-figure">
+            <figcaption class="spec-label">Fig. 1 — RAG pipeline shape</figcaption>
             <svg class="pipeline-diagram" viewBox="0 0 460 220" role="img" aria-labelledby="pipeline-title pipeline-desc">
               <title id="pipeline-title">Diagram of a retrieval-augmented generation pipeline</title>
               <desc id="pipeline-desc">Four connected stages flow left to right: Ingest, Retrieve, Generate, and Audit, representing the architecture used in the compliance document assistant project.</desc>
@@ -172,10 +178,10 @@
     <!-- ================= CTA ================= -->
     <section class="block" aria-labelledby="cta-heading">
       <div class="wrap">
-        <div class="bracket-frame" style="padding: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+        <div class="bracket-frame cta-panel">
           <div>
-            <h2 id="cta-heading" style="font-family: var(--font-display); margin: 0 0 0.4rem; font-size: 1.4rem;">Looking for a GenAI intern who ships?</h2>
-            <p style="margin: 0; color: var(--ink-soft);">I'm actively interviewing and open to internship opportunities.</p>
+            <h2 id="cta-heading">Looking for a GenAI intern who ships?</h2>
+            <p>I'm actively interviewing and open to internship opportunities.</p>
           </div>
           <a class="btn btn-primary" href="contact.html">Start a conversation</a>
         </div>

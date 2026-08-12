@@ -91,3 +91,38 @@
     statusEl.focus();
   });
 })();
+
+(function () {
+  var toggles = Array.from(document.querySelectorAll('.theme-toggle'));
+  if (!toggles.length) return;
+
+  function updateToggleState(isDark) {
+    toggles.forEach(function (toggle) {
+      toggle.setAttribute('aria-pressed', String(isDark));
+      var icon = toggle.querySelector('.theme-toggle__icon');
+      var label = toggle.querySelector('.theme-toggle__label');
+      if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+      if (label) label.textContent = isDark ? 'Light' : 'Dark';
+    });
+  }
+
+  function setTheme(isDark) {
+    document.documentElement.classList.toggle('dark', isDark);
+    updateToggleState(isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
+
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      var isDark = !document.documentElement.classList.contains('dark');
+      setTheme(isDark);
+    });
+  });
+
+  var savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme === 'dark');
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme(true);
+  }
+})();

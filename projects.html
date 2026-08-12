@@ -18,9 +18,15 @@
       <a class="brand" href="index.html">
         Vansh <span class="brand-mark">// dev.log</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-        Menu
-      </button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="theme-toggle__icon">🌙</span>
+          <span class="theme-toggle__label">Dark</span>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          Menu
+        </button>
+      </div>
       <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -34,13 +40,13 @@
 
   <main id="main-content">
 
-    <section class="hero" style="padding-block: clamp(2.5rem, 6vw, 4rem) 1rem;" aria-labelledby="projects-heading">
+    <section class="hero" aria-labelledby="projects-heading">
       <div class="wrap">
         <p class="spec-label">Projects</p>
-        <h1 id="projects-heading" style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 1rem;">
+        <h1 id="projects-heading">
           Four builds, four different constraints.
         </h1>
-        <p class="hero-lede" style="max-width: 60ch;">
+        <p class="hero-lede">
           Each project below was built as a complete system rather than a proof of concept —
           with auth, error handling, and (where relevant) a working LLM integration.
         </p>
@@ -68,8 +74,8 @@
               running audit log of every query and the sources it touched, which matters a lot in a
               compliance context.
             </p>
-            <h3 style="font-family: var(--font-display); font-size: 1.05rem; margin: 1.5rem 0 0.5rem;">Key design decisions</h3>
-            <ul style="color: var(--ink-soft); font-size: 0.95rem; padding-left: 1.2rem;">
+            <h3>Key design decisions</h3>
+            <ul>
               <li>Chunking strategy tuned for compliance documents rather than general text</li>
               <li>Citation enforcement to reduce hallucinated answers</li>
               <li>RBAC checked at retrieval time, not just at the UI layer</li>
@@ -104,8 +110,8 @@
               through Cloudinary. The frontend includes Recharts-powered dashboards and an
               in-app notification system.
             </p>
-            <h3 style="font-family: var(--font-display); font-size: 1.05rem; margin: 1.5rem 0 0.5rem;">A real problem solved</h3>
-            <p style="color: var(--ink-soft); font-size: 0.95rem;">
+            <h3>A real problem solved</h3>
+            <p>
               Cloudinary v1/v2 conflicted with the multer-storage-cloudinary integration during
               the build — resolving that dependency mismatch was part of getting file uploads
               working reliably.
