@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App — Vansh</title>
+  <meta name="description" content="A client-side To-Do List application with full CRUD, localStorage persistence, and status filtering — built to practice DOM manipulation and event delegation.">
+  <meta name="author" content="Vansh">
+  <link rel="canonical" href="https://example.com/todo.html">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        Vansh <span class="brand-mark">// dev.log</span>
+      </a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="theme-toggle__icon">🌙</span>
+          <span class="theme-toggle__label">Dark</span>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          Menu
+        </button>
+      </div>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" aria-labelledby="todo-heading">
+      <div class="wrap">
+        <p class="spec-label">Task 3 // JavaScript Logic &amp; State Management</p>
+        <h1 id="todo-heading">A state-driven <span class="accent">To-Do List</span>.</h1>
+        <p class="hero-lede">
+          Full CRUD, automatic persistence to <code>window.localStorage</code>, and status
+          filtering — built with vanilla JS, dynamic DOM creation, and a single delegated
+          event listener rather than one per task.
+        </p>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="todo-app bracket-frame" aria-labelledby="todo-heading">
+
+        <form id="todo-form" class="todo-form" novalidate>
+          <label class="visually-hidden" for="todo-input">New task</label>
+          <input
+            type="text"
+            id="todo-input"
+            name="todo-input"
+            class="todo-input"
+            placeholder="Add a task and press Enter…"
+            autocomplete="off"
+            maxlength="200"
+          >
+          <button type="submit" class="btn btn-primary todo-add-btn">Add task</button>
+        </form>
+        <p id="todo-form-error" class="todo-form-error" role="alert" aria-live="polite"></p>
+
+        <div class="todo-toolbar">
+          <div class="todo-filters" role="group" aria-label="Filter tasks">
+            <button type="button" class="todo-filter is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="todo-filter" data-filter="active" aria-pressed="false">Active</button>
+            <button type="button" class="todo-filter" data-filter="completed" aria-pressed="false">Completed</button>
+          </div>
+          <button type="button" class="todo-clear-completed" id="todo-clear-completed">Clear completed</button>
+        </div>
+
+        <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+        <p id="todo-empty" class="todo-empty" hidden>Nothing here yet — add your first task above.</p>
+
+        <div class="todo-footer">
+          <span id="todo-count" class="todo-count" aria-live="polite">0 tasks</span>
+          <span class="todo-persist-note">Autosaved to this browser</span>
+        </div>
+
+      </section>
+
+      <section class="todo-notes" aria-labelledby="todo-notes-heading">
+        <h2 id="todo-notes-heading">Implementation notes</h2>
+        <dl class="project-meta">
+          <dt>CRUD</dt>
+          <dd>Create, rename (double-click to edit), toggle complete, and delete — all handled through one delegated <code>click</code>/<code>dblclick</code> listener on the list container.</dd>
+          <dt>Persistence</dt>
+          <dd>State is a plain array of task objects, serialized to <code>localStorage</code> on every change and rehydrated on page load.</dd>
+          <dt>Filtering</dt>
+          <dd>All / Active / Completed views are derived from the same state array — no duplicate DOM, just a re-render with a filter predicate.</dd>
+          <dt>Rendering</dt>
+          <dd>Task elements are built with <code>document.createElement</code> rather than <code>innerHTML</code> string concatenation, to avoid injection risk from task text.</dd>
+        </dl>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; 2026 Vansh. Built with semantic HTML5.</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/todo.js"></script>
+</body>
+</html>

@@ -185,6 +185,43 @@
         </div>
       </article>
 
+      <article class="project-article" id="todo-app" aria-labelledby="todo-heading">
+        <div class="project-head">
+          <h2 id="todo-heading">To-Do List App</h2>
+          <span class="project-status">Latest build</span>
+        </div>
+        <div class="project-body">
+          <div>
+            <p>
+              A client-side task manager built to lock down core JavaScript fundamentals:
+              DOM manipulation, event handling, and local data persistence — without a
+              framework or backend in the way.
+            </p>
+            <p>
+              State lives in a single array that's serialized to <code>window.localStorage</code>
+              on every change and rehydrated on load, so tasks survive a browser refresh. All
+              task interactions — toggling, editing, deleting — go through one delegated event
+              listener on the list container rather than a listener per item, and the All /
+              Active / Completed views are just filtered re-renders of the same state.
+            </p>
+            <h3>Key design decisions</h3>
+            <ul>
+              <li>Event delegation instead of per-item listeners for toggle/edit/delete</li>
+              <li>Rendering is a pure function of state — filters never touch separate DOM</li>
+              <li>Tasks built with <code>createElement</code>, not <code>innerHTML</code>, to avoid injecting raw user text</li>
+            </ul>
+          </div>
+          <dl class="project-meta">
+            <dt>Stack</dt>
+            <dd>Vanilla JS, localStorage</dd>
+            <dt>Role</dt>
+            <dd>Solo build</dd>
+            <dt>Status</dt>
+            <dd>Complete — <a href="todo.html">launch demo</a></dd>
+          </dl>
+        </div>
+      </article>
+
     </div>
 
   </main>
